@@ -1,0 +1,137 @@
+:root {
+    --primary-color: blue;
+    --secondary-color: white;
+    --success-color: teal;
+    --error-color: orange;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    background-color: white;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.upload-container {
+    border: 2px dashed var(--primary-color);
+    border-radius: 8px;
+    padding: 40px 20px;
+    text-align: center;
+    margin: 20px 0;
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
+
+.upload-container:hover {
+    background-color: var(--secondary-color);
+}
+
+.upload-container.drag-over {
+    background-color: var(--secondary-color);
+    border-color: var(--success-color);
+}
+
+.icon {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.small {
+    font-size: 0.8em;
+    color: #666;
+}
+
+.loading-spinner {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.spinner {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid var(--primary-color);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    margin: 0 auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.analysis-results {
+    margin-top: 20px;
+}
+
+.analysis-card {
+    background-color: var(--secondary-color);
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.score-circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--primary-color);
+    border: 3px solid var(--primary-color);
+}
+
+.statistics {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.stat-item {
+    text-align: center;
+    padding: 10px;
+    background-color: white;
+    border-radius: 4px;
+}
+
+.suggestions {
+    margin-top: 20px;
+}
+
+.suggestion-item {
+    padding: 10px;
+    margin: 5px 0;
+    background-color: white;
+    border-radius: 4px;
+}
+
+.error-message {
+    color: var(--error-color);
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid var(--error-color);
+    border-radius: 4px;
+}
